@@ -1,0 +1,65 @@
+.student {
+  padding: 110px 70px 125px;
+}
+
+.student__title {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.88px;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #DADADA;
+}
+
+.student__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 66px;
+}
+
+.stident__name {
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: -2px;
+  margin: 0;
+}
+
+.student__job {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 18px 0 26px;
+  margin: 0;
+}
+
+.student__intro {
+  margin: 0;
+  max-width: 599px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  padding-bottom: 99px;
+}
+
+.student__link {
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+
+}
+
+.student__photo {
+  width: 270px;
+  height: 327px;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+  align-self: flex-start;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}

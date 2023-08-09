@@ -1,0 +1,25 @@
+.hero {
+  /* width: 100%; */
+  padding: 20px 40px 0;
+}
+
+.hero__container {
+  border-radius: 10px;
+  background: #272727;
+  min-height: 493px;
+  display: grid;
+  grid-template-rows: 1fr 66px;
+}
+
+.hero__title {
+  margin: 0 auto;
+  align-self: center;
+  justify-self: center;
+  max-width: 730px;
+  color: #FFF;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: -2px;
+}

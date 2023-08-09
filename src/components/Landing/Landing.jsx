@@ -1,23 +1,19 @@
 import React from 'react';
+import Hero from './Hero/Hero';
 import Header from '../Header/Header';
 import AboutMe from './AboutMe/AboutMe';
-import AboutProject from './AboutProject/AboutProject';
-import NavTab from './NavTab/NavTab';
-import Portfolio from './Portfolio/Portfolio';
-import Promo from './Promo/Promo';
+import Student from './Student/Student';
 import Techs from './Techs/Techs';
 
 const Landing = () => {
   return (
-    <>
+    <main>
       <Header />
-      <Promo />
-      <NavTab />
-      <AboutProject />
-      <Techs />
+      <Hero />
       <AboutMe />
-      <Portfolio />
-    </>
+      <Techs />
+      <Student />
+    </main>
   );
 };
 
