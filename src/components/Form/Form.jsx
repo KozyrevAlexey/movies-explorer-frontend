@@ -17,7 +17,7 @@ const Form = ({ title, children, buttonName, spanText, spanPatch, spanLink }) =>
           alt="Логотип"
         />
       </Link>
-      <h2 className="form__title">{title}</h2>
+      <h1 className="form__title">{title}</h1>
       {children}
 
       <button
