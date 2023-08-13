@@ -3,7 +3,7 @@ import './Header.css';
 import Navigation from '../Navigation/Navigation';
 import { useLocation } from 'react-router-dom';
 
-function Header() {
+const Header = () => {
   const location = useLocation();
 
   return (
