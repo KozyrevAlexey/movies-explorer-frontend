@@ -3,6 +3,7 @@ display: flex;
 align-self: center;
 align-items: center;
 margin-top: 27px;
+padding-bottom: 89px;
 }
 
 .checkbox__input {

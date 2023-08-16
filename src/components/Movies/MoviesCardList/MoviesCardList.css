@@ -1,0 +1,15 @@
+.movies__container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding-top: 10px;
+}
+
+.movies__list {
+display: grid;
+grid-template-columns: repeat(3, minmax(1%, 1fr));
+gap: 30px 24px;
+list-style: none;
+margin: 0;
+padding: 0 0 30px;
+}

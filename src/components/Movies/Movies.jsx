@@ -1,15 +1,21 @@
 import React from 'react';
 import Header from '../Header/Header';
 import SearchForm from '../SearchForm/SearchForm';
+import MoviesCardList from './MoviesCardList/MoviesCardList';
+import Preloader from '../Preloader/Preloader';
+import './Movies.css';
 
-const Movies = () => {
+const Movies = ({ textButton }) => {
   return (
-    
-    <section>
+    <>
     <Header />
-    <SearchForm />
-<h2>Movies</h2>
-    </section>
+      <main className='movies'>      
+      <SearchForm />
+      <MoviesCardList textButton={textButton} />
+      <button className='movies__button'>Еще</button>
+    </main>
+    </>
+
   );
 };
 

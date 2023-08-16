@@ -20,7 +20,7 @@ function App() {
   return (
     <CurrentUserContext.Provider value={{}}>
       <div className="page">
-        <div >
+        <>
           <Routes>
             <Route
               path='/'
@@ -28,11 +28,11 @@ function App() {
             />
             <Route
               path='/movies'
-            element={<Movies />}
+            element={<Movies textButton='Сахранить' />}
             />
             <Route
               path='/saved-movies'
-            element={<SavedMovies />}
+            element={<SavedMovies textButton='x' />}
             />
             <Route
               path='/profile'
@@ -51,7 +51,7 @@ function App() {
               element={<NotFound />}
             />
           </Routes>
-        </div>
+          </>
         {footerSection && <Footer />}
       </div>
     </CurrentUserContext.Provider>

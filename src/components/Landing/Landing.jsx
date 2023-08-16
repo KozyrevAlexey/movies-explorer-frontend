@@ -7,13 +7,16 @@ import Techs from './Techs/Techs';
 
 const Landing = () => {
   return (
-    <main>
-      <Header />
+    <>
+    <Header />
+    <main> 
       <Hero />
       <AboutMe />
       <Techs />
       <Student />
     </main>
+    </>
+
   );
 };
 

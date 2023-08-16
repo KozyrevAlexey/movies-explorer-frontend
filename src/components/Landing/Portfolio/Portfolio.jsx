@@ -11,7 +11,7 @@ const Portfolio = () => {
           <p className='portfolio__name'>Статический сайт</p>
             <Link 
             className='portfolio__link'
-            to={'https://github.com/KozyrevAlexey/Learn-to-learn'}
+            to={'https://kozyrevalexey.github.io/Learn-to-learn/'}
             target='_blank'
             rel='noreferrer'>
               <span className='portfolio__icon'></span>
