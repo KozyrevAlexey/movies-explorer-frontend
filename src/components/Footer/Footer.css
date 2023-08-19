@@ -1,5 +1,5 @@
 .footer {
-  padding: 79px;
+  padding: 79px 70px;
   background: #202020;
 }
 
@@ -16,7 +16,8 @@
 .footer__wrapper {
   display: flex;
   justify-content: space-between;
-  padding-top: 20px;
+  align-items: flex-end;
+  padding-top: 18px;
 }
 
 .footer__links {
