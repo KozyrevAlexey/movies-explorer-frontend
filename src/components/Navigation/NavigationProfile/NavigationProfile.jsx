@@ -3,22 +3,22 @@ import { useState } from "react";
 import './NavigationProfile.css'
 import { Link, NavLink } from "react-router-dom";
 import BurgerMenu from "./BurgerMenu/BurgerMenu";
-import icon from "../../../images/header_icon-main.svg"
+import icon from "../../../images/header_icon-main.svg";
 
 const NavigationProfile = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
   function toggleBurgerMenu() {
-    setIsMenuOpen(!isMenuOpen);
+    setIsOpenMenu(!isOpenMenu);
   }
 
   return (
     <>
-      {!isMenuOpen ? (
+      {!isOpenMenu ? (
         <button className='button__burger' tabIndex={1} onClick={toggleBurgerMenu} />
       ) : (
         <button className='button__burger-closse' tabIndex={1} onClick={toggleBurgerMenu} />
       )}
-      <BurgerMenu isMenuOpen={isMenuOpen} />
+      <BurgerMenu isOpenMenu={isOpenMenu} />
       <div className='menu__profile'>
         <div className="menu__profile-links">
           
