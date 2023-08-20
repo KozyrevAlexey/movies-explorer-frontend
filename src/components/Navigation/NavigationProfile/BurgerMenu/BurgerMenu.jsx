@@ -12,21 +12,18 @@ const BurgerMenu = ({ isOpenMenu }) => {
             <NavLink
               className={({ isActive }) => `burger-menu__link ${isActive ? 'active' : ''}`}
               to='/'
-              tabIndex={1}
             >
               Главная
             </NavLink>
             <NavLink
               className={({ isActive }) => `burger-menu__link ${isActive ? 'active' : ''}`}
               to='/movies'
-              tabIndex={1}
             >
               Фильмы
             </NavLink>
             <NavLink
               className={({ isActive }) => `burger-menu__link ${isActive ? 'active' : ''}`}
               to='/saved-movies'
-              tabIndex={1}
             >
               Сохраненные фильмы
             </NavLink>
@@ -34,7 +31,6 @@ const BurgerMenu = ({ isOpenMenu }) => {
           <Link
             className='burger-menu__profile'
             to='/profile'
-            tabIndex={1}
           >
             <div className='burger-menu__profile-wrap'>
               <img className='burger-menu__profile-icon' src={icon} alt="Изображение иконки профиля" />

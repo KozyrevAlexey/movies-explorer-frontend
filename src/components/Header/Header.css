@@ -9,3 +9,15 @@
 .header__black {
   background-color: #202020;
 }
+
+@media (max-width: 770px) {
+  .header {
+    padding: 18px 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 18px 14px;
+  }
+}
