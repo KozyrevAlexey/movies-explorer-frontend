@@ -24,10 +24,10 @@ const Hero = () => {
           </Link>
         </div>
         <img
-        className='hero__globe'
-        src={GlobeWeb}
-        alt='Изображение интернет-глобуса'
-      />
+          className='hero__globe'
+          src={GlobeWeb}
+          alt='Изображение интернет-глобуса'
+        />
       </div>
     </section>
   );

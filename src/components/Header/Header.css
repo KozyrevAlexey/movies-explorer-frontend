@@ -1,9 +1,8 @@
 .header {
-  /* display: flex; */
   align-items: center;
   padding: 18px 70px;
   position: relative;
-  background-color:  #073042;
+  background-color: #073042;
 }
 
 .header__black {

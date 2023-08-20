@@ -1,6 +1,5 @@
 .search__form {
   width: 100%;
-  /* border-bottom: 1px solid rgba(170, 170, 170, 0.2); */
 }
 
 .form__search {
@@ -42,4 +41,20 @@
 .form__search-button:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+
+@media (max-width: 400px) {
+  .form__search {
+    padding: 0;
+  }
+
+  .form__search-input {
+    font-size: 16px;
+    height: 56px;
+  }
+
+  .form__search-button {
+    height: 44px;
+    margin-right: 6px;
+  }
 }

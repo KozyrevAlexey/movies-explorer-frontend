@@ -17,9 +17,9 @@ const SearchForm = () => {
         <button
           className='form__search-button'
           type='button'
-          >
+        >
           Поиск
-          </button>
+        </button>
       </form>
       <CheckBox />
     </section>

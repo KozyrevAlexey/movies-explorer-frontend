@@ -134,29 +134,10 @@
 }
 
 @media (max-width: 400px) {
-  /* .about {
-    padding: 71px 18px;
-  }
-
-  .about__title {
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: -0.72px;
-    padding-bottom: 28px;
-  }
-
-  /* .about__info-subtitle {
-    font-size: 20px;
-  } */
-
-  /* .about__info-text {
-    font-size: 11px;
-    line-height: 16px
-  } */ 
-
   .about__info-subtitle {
     font-size: 18px;
-  } 
+  }
+
   .about__info {
     padding-top: 60px;
     gap: 56px;
@@ -173,11 +154,11 @@
     row-gap: 11px;
   }
 
- .about__stage-subtitle {  
-font-size: 11px;
- }
+  .about__stage-subtitle {
+    font-size: 11px;
+  }
 
- .about__stage-desc {
-  font-size: 11px;
- }
+  .about__stage-desc {
+    font-size: 11px;
+  }
 }

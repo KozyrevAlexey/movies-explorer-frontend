@@ -7,16 +7,16 @@ const NavigationLanding = () => {
     <div className='nav__landing'>
       <div className='nav__landing-links'>
         <Link
-        className='nav__link nav__landing-reg'
-        to='/signup'
+          className='nav__link nav__landing-reg'
+          to='/signup'
         >
-        Регистрация
+          Регистрация
         </Link>
         <Link
-        className='nav__link nav__landing-enter'
-        to='/signup'
+          className='nav__link nav__landing-enter'
+          to='/signup'
         >
-        Войти
+          Войти
         </Link>
       </div>
     </div>

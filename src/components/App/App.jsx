@@ -28,30 +28,30 @@ function App() {
             />
             <Route
               path='/movies'
-            element={<Movies textButton='Сахранить' />}
+              element={<Movies textButton='Сахранить' />}
             />
             <Route
               path='/saved-movies'
-            element={<SavedMovies textButton='x' />}
+              element={<SavedMovies textButton='x' />}
             />
             <Route
               path='/profile'
-            element={<Profile />}
+              element={<Profile />}
             />
             <Route
               path='/signup'
-            element={<Register />}
+              element={<Register />}
             />
             <Route
               path='/signin'
-            element={<Login />}
+              element={<Login />}
             />
             <Route
               path='*'
               element={<NotFound />}
             />
           </Routes>
-          </>
+        </>
         {footerSection && <Footer />}
       </div>
     </CurrentUserContext.Provider>

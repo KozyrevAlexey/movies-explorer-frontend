@@ -3,7 +3,7 @@ import './MovieCard.css';
 // import { useLocation } from "react-router-dom";
 import { useState } from "react";
 
-const MovieCard = ({movie, textButton}) => {
+const MovieCard = ({ movie, textButton }) => {
 
   const [isLiked, setIsLiked] = useState(false);
 
@@ -21,16 +21,16 @@ const MovieCard = ({movie, textButton}) => {
         <h2 className='movie__name'>{movie.name}</h2>
         <p className='movie__time'>{movie.time}</p>
       </div>
-      <img 
-      className='movie__image' 
-      src={movie.image} 
-      alt={movie.name} 
+      <img
+        className='movie__image'
+        src={movie.image}
+        alt={movie.name}
       />
-      <button 
-      className={likeMovieButton}
-      onClick={handleClickLike} 
-      type='button'>
-      {!isLiked ? textButton : null}
+      <button
+        className={likeMovieButton}
+        onClick={handleClickLike}
+        type='button'>
+        {!isLiked ? textButton : null}
       </button>
     </li>
 

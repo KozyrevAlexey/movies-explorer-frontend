@@ -9,7 +9,7 @@ const MoviesCardList = ({ textButton }) => {
   return (
     <section className='movies__container'>
 
-      {location.pathname === '/movies' || location.pathname == '/movies' ? (
+      {location.pathname === '/movies' || location.pathname === '/movies' ? (
         <>
           <ul className='movies__list'>
             {startCards.slice().map((movie, i) => (
@@ -30,6 +30,8 @@ const MoviesCardList = ({ textButton }) => {
           ))}
         </ul>
       )}
+
+
     </section>
   )
 }

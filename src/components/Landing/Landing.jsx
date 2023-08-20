@@ -8,13 +8,13 @@ import Techs from './Techs/Techs';
 const Landing = () => {
   return (
     <>
-    <Header />
-    <main> 
-      <Hero />
-      <AboutMe />
-      <Techs />
-      <Student />
-    </main>
+      <Header />
+      <main>
+        <Hero />
+        <AboutMe />
+        <Techs />
+        <Student />
+      </main>
     </>
 
   );

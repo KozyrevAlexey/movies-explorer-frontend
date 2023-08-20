@@ -95,5 +95,17 @@
   .button__burger {
     display: block;
   }
+}
 
+@media (max-width: 400px) {
+  .button__burger {
+    background: url(../../../images/icon__burger_open-min.svg);
+    width: 40px;
+
+  }
+
+  .button__burger-closse {
+    top: 18px;
+    right: 21px;
+  }
 }

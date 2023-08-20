@@ -8,12 +8,12 @@ import './Movies.css';
 const Movies = ({ textButton }) => {
   return (
     <>
-    <Header />
-      <main className='movies'>      
-      <SearchForm />
-      <MoviesCardList textButton={textButton} />
-      <button className='movies__button'>Еще</button>
-    </main>
+      <Header />
+      <main className='movies'>
+        <SearchForm />
+        <MoviesCardList textButton={textButton} />
+        <button className='movies__button'>Еще</button>
+      </main>
     </>
 
   );

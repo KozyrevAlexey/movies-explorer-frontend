@@ -7,33 +7,33 @@ const NavButton = () => {
     <nav className='nav-button'>
       <ul className='nav-button__links'>
         <li className=''>
-          <Link 
-          className='nav-button__link'
-          to='about'
-          smooth={true}
-          duration={300}
+          <Link
+            className='nav-button__link'
+            to='about'
+            smooth={true}
+            duration={300}
           >
-          О проекте
+            О проекте
           </Link>
         </li>
         <li className=''>
-          <Link 
-          className='nav-button__link'
-          to='tech'
-          smooth={true}
-          duration={300}
+          <Link
+            className='nav-button__link'
+            to='tech'
+            smooth={true}
+            duration={300}
           >
-          Технологии
+            Технологии
           </Link>
         </li>
         <li className=''>
-          <Link 
-          className='nav-button__link'
-          to='student'
-          smooth={true}
-          duration={300}
+          <Link
+            className='nav-button__link'
+            to='student'
+            smooth={true}
+            duration={300}
           >
-          Студент
+            Студент
           </Link>
         </li>
       </ul>

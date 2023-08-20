@@ -5,14 +5,14 @@ import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../Movies/MoviesCardList/MoviesCardList';
 
 
-const SavedMovies = ({textButton}) => {
+const SavedMovies = ({ textButton }) => {
   return (
     <>
-    <Header />
-      <main className='movies'>      
-      <SearchForm />
-      <MoviesCardList textButton={textButton} />
-    </main>
+      <Header />
+      <main className='movies'>
+        <SearchForm />
+        <MoviesCardList textButton={textButton} />
+      </main>
     </>
   );
 };
