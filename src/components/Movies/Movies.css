@@ -1,5 +1,5 @@
 .movies {
-  padding: 50px 70px 80px;
+  padding: 65px 70px 80px;
 }
 
 .movies__button {
@@ -11,7 +11,7 @@
 font-size: 12px;
 font-weight: 500;
 border: none;
-margin-top: 50px;
+margin-top: 65px;
 transition: 0.5s;
 }
 

@@ -25,7 +25,6 @@ const NavigationProfile = () => {
             <NavLink
               className={({ isActive }) => `menu__profile-link ${isActive ? 'active' : ''}`}
               to='/movies'
-              tabIndex={1}
             >
               Фильмы
             </NavLink>
@@ -33,7 +32,6 @@ const NavigationProfile = () => {
             <NavLink
               className={({ isActive }) => `menu__profile-link ${isActive ? 'active' : ''}`}
               to='/saved-movies'
-              tabIndex={1}
             >
               Сохраненные фильмы
             </NavLink>
@@ -42,7 +40,6 @@ const NavigationProfile = () => {
         <Link 
         className='menu__profile-account'
         to='/profile'
-        tabIndex={1}
         >
         <div className='menu__profile-box'>
           <img className='menu__profile-icon' src={icon} alt="Изображение иконки профиля" />

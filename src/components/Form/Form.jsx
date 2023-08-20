@@ -6,7 +6,6 @@ import logo from '../../images/logo.svg';
 const Form = ({ title, children, buttonName, spanText, spanPatch, spanLink }) => {
   return (
     <form className="form">
-
       <Link
         className="form__link"
         to={'/'}

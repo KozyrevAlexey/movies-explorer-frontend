@@ -1,5 +1,6 @@
 .menu__profile {
   display: flex;
+  align-items: center;
 }
 
 .menu__profile-links {

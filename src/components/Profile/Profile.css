@@ -7,14 +7,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 74px 0;
+  padding: 70px 0;
 }
 
 .profile__title {
 font-size: 24px;
 font-weight: 500;
 line-height: normal;
-margin: 0 0 123px;
+margin: 0 0 110px;
 }
 
 .profile__form {
@@ -27,8 +27,8 @@ margin: 0 0 123px;
 .profile__label {
   display: flex;
   border-bottom: 1px solid #424242;
-  padding: 0 0 16px;
-  margin: 0 0 17px;
+  padding: 0 0 5px;
+  margin: 0 0 5px;
 }
 
 .profile__label:last-child {
@@ -58,6 +58,7 @@ padding: 0;
   text-align: center;
   max-width: 148px;
   margin: 0 auto;
+  padding-top: 200px;
 
 }
 

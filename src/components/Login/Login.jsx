@@ -19,7 +19,7 @@ const Login = () => {
 
         <label className='form_label' htmlFor='password'> Пароль </label>
         <input className='form__input' id='name' type='password' placeholder='Введите пароль' />
-        <span className='form__span'> Что-то пошло не так </span>
+        <span className='form__span form__span-error_login'> Что-то пошло не так </span>
       </Form>
     </section>
   );

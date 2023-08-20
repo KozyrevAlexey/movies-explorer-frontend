@@ -22,7 +22,7 @@ const Register = () => {
 
         <label className='form_label' htmlFor='password'> Пароль </label>
         <input className='form__input form__input-error' id='name' type='password' placeholder='Придумайте пароль' />
-        <span className='form__span form__span-error'> Что-то пошло не так </span>
+        <span className='form__span form__span-error_register'> Что-то пошло не так </span>
       </Form>
     </section>
   );
