@@ -1,3 +1,6 @@
+/* * {
+  border: 1px solid red;
+} */
 .movies {
   padding: 65px 70px 80px;
 }
@@ -11,10 +14,13 @@
   font-size: 12px;
   font-weight: 500;
   border: none;
-  margin-top: 65px;
+  margin-top: 62px;
   transition: 0.5s;
 }
 
+.movies__button {
+  margin-top: 75px;
+}
 .movies__button:hover {
   cursor: pointer;
   opacity: 0.7;
@@ -22,7 +28,7 @@
 
 @media (max-width: 770px) {
   .movies {
-    padding: 65px 28px 80px;
+    padding: 65px 28px 85px;
   }
 }
 

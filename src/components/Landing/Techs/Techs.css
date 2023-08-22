@@ -83,13 +83,14 @@ padding: 0; */
 
   .tech__list {
     flex-wrap: wrap;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
 
   }
 
   .tech__item {
     min-width: 84px;
     min-height: 57px;
+    font-size: 12px;
   }
 }
 
@@ -123,6 +124,7 @@ padding: 0; */
 
   .tech__list {
     flex-wrap: wrap;
+    /* justify-content: flex-start; */
   }
 }
 
@@ -141,6 +143,7 @@ padding: 0; */
 
   .tech__list {
     max-width: 178px;
+    justify-content: flex-start;
   }
 
   .tech__text {

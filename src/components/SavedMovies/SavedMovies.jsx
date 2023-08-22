@@ -9,7 +9,7 @@ const SavedMovies = ({ textButton }) => {
   return (
     <>
       <Header />
-      <main className='movies'>
+      <main className='saved__movies'>
         <SearchForm />
         <MoviesCardList textButton={textButton} />
       </main>

@@ -7,7 +7,7 @@ const Header = () => {
   const location = useLocation();
 
   return (
-    <header className={location.pathname === '/' ? 'header' : 'header header__black'}>
+    <header className={location.pathname === '/' ? 'header' : 'header header_black'}>
       <Navigation className='nav' />
     </header>
   );

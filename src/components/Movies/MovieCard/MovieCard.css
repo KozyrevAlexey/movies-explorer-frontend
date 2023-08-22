@@ -13,7 +13,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 18px;
+  /* padding: 0 18px; */
   gap: 14px;
   width: 100%;
 }
@@ -26,7 +26,7 @@
   margin: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
+  /* overflow: hidden; */
   padding-left: 18px;
 }
 

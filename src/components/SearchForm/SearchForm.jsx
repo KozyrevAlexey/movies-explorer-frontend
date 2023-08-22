@@ -4,18 +4,19 @@ import CheckBox from "../CheckBox/CheckBox";
 
 const SearchForm = () => {
   return (
-    <section className='search__form'>
-      <form className='form__search'>
+    <section className='movies__search-section'>
+      <form className='movies__search-section-form'>
         <input
-          className='form__search-input'
+          className='movies__search-section-form-input'
           name='search'
           minLength='2'
           maxLength='40'
           type='text'
           placeholder='Фильм'
+          required  
         />
         <button
-          className='form__search-button'
+          className='movies__search-section-form-button'
           type='button'
         >
           Поиск

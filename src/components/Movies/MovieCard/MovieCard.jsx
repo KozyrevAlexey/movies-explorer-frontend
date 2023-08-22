@@ -24,7 +24,7 @@ const MovieCard = ({ movie, textButton }) => {
       <img
         className='movie__image'
         src={movie.image}
-        alt={movie.name}
+        alt={`Изображение постера к фильму: ${movie.name}`}
       />
       <button
         className={likeMovieButton}

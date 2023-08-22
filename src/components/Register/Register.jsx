@@ -4,7 +4,7 @@ import Form from '../Form/Form';
 
 const Register = () => {
   return (
-    <section className='register'>
+    <main className='register'>
       <Form
         title='Добро пожаловать!'
         buttonName='Зарегестрироваться'
@@ -12,20 +12,21 @@ const Register = () => {
         spanPatch='/signin'
         spanLink='Войти'
       >
-        <label className='form_label' htmlFor='name'>Имя</label>
-        <input className='form__input' id='name' type='text' placeholder='Введите имя' />
+        <label className='form__label' htmlFor='name'>Имя</label>
+        <input className='form__input' id='name' type='text' placeholder='Введите имя' required minLength='2' maxLength='40'/>
         <span className='form__span'>Что-то пошло не так</span>
 
-        <label className='form_label' htmlFor='email'>E-mail</label>
-        <input className='form__input' id='email' type='text' placeholder='Укажите почту' />
+        <label className='form__label' htmlFor='email'>E-mail</label>
+        <input className='form__input' id='email' type='text' placeholder='Укажите почту' required />
         <span className='form__span'> Что-то пошло не так </span>
 
-        <label className='form_label' htmlFor='password'> Пароль </label>
-        <input className='form__input form__input-error' id='name' type='password' placeholder='Придумайте пароль' />
-        <span className='form__span form__span-error_register'> Что-то пошло не так </span>
+        <label className='form__label' htmlFor='password'> Пароль </label>
+        <input className='form__input form__input-error' id='name' type='password' placeholder='Придумайте пароль' required minLength='2' maxLength='10'/>
+        <span className='form__span form__span_error-register'> Что-то пошло не так </span>
       </Form>
-    </section>
+    </main>
   );
 };
 
 export default Register;
+

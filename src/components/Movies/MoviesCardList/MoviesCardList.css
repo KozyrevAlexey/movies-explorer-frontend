@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 75px;
+  padding-top: 79px;
 }
 
 .movies__list {
@@ -16,15 +16,19 @@
   gap: 32px;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 995px) {
   .movies__list {
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 14px;
+    row-gap: 24px;
     column-gap: 24px;
+  }
+
+  .movies__container {
+    padding-top: 84px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 670px) {
   .movies__list {
     grid-template-columns: 1fr;
     row-gap: 16px;

@@ -98,10 +98,16 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .hero {
     padding-bottom: 29px;
-  }
+  } 
+}
+
+@media (max-width: 400px) {
+  /* .hero {
+    padding-bottom: 29px;
+  } */
 
   .hero__globe {
     max-width: 206px;

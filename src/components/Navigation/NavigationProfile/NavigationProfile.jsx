@@ -14,23 +14,23 @@ const NavigationProfile = () => {
   return (
     <>
       {!isOpenMenu ? (
-        <button className='button__burger' tabIndex={1} onClick={toggleBurgerMenu} />
+        <button className='nav__button-burger'  onClick={toggleBurgerMenu} />
       ) : (
-        <button className='button__burger-closse' tabIndex={1} onClick={toggleBurgerMenu} />
+        <button className='button__burger-closse'  onClick={toggleBurgerMenu} />
       )}
       <BurgerMenu isOpenMenu={isOpenMenu} />
-      <div className='menu__profile'>
-        <div className="menu__profile-links">
+      <div className='nav__menu-profile'>
+        <div className="nav__menu-profile-links">
 
           <NavLink
-            className={({ isActive }) => `menu__profile-link ${isActive ? 'active' : ''}`}
+            className={({ isActive }) => `nav__menu-profile-link ${isActive ? 'active' : ''}`}
             to='/movies'
           >
             Фильмы
           </NavLink>
 
           <NavLink
-            className={({ isActive }) => `menu__profile-link ${isActive ? 'active' : ''}`}
+            className={({ isActive }) => `nav__menu-profile-link ${isActive ? 'active' : ''}`}
             to='/saved-movies'
           >
             Сохраненные фильмы
@@ -38,11 +38,11 @@ const NavigationProfile = () => {
 
         </div>
         <Link
-          className='menu__profile-account'
+          className='nav__menu-profile-account'
           to='/profile'
         >
-          <div className='menu__profile-box'>
-            <img className='menu__profile-icon' src={icon} alt="Изображение иконки профиля" />
+          <div className='nav__menu-profile-box'>
+            <img className='nav__menu-profile-icon' src={icon} alt="Изображение иконки профиля" />
           </div>
           Аккаунт
         </Link>

@@ -9,9 +9,9 @@ const Profile = () => {
   const [name, setName] = useState('Виталий');
   const [email, setEmail] = useState('pochta@yandex.ru')
   return (
-    <section className='profile'>
+    <main className='profile'>
       <Header />
-      <div className='profile__content'>
+      <section className='profile__content'>
         <h1 className='profile__title'>Привет, Виталий!</h1>
         <form className='profile__form'>
           <div className='profile__element'>
@@ -48,8 +48,8 @@ const Profile = () => {
               to='/signin'>Выйти из аккаунта</Link>
           </div>
         </form>
-      </div>
-    </section>
+      </section>
+    </main>
   );
 };
 

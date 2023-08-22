@@ -1,5 +1,5 @@
 .student {
-  padding: 110px 70px 0;
+  padding: 112px 70px 0;
 }
 
 .student__title {
@@ -20,7 +20,7 @@
   padding-top: 66px;
 }
 
-.stident__name {
+.student__content-name {
   font-size: 50px;
   font-weight: 400;
   line-height: 58px;
@@ -28,7 +28,7 @@
   margin: 0;
 }
 
-.student__job {
+.student__content-job {
   font-size: 18px;
   font-weight: 500;
   line-height: 20px;
@@ -36,7 +36,7 @@
   margin: 0;
 }
 
-.student__intro {
+.student__content-intro {
   margin: 0;
   max-width: 599px;
   font-size: 14px;
@@ -69,19 +69,19 @@
     padding: 88px 50px;
   }
 
-  .stident__name {
+  .student__content-name {
     font-size: 40px;
     line-height: 40px;
     letter-spacing: -1.6px;
   }
 
-  .student__job {
+  .student__content-job {
     font-size: 12px;
     line-height: 18px;
     padding-bottom: 20px;
   }
 
-  .student__intro {
+  .student__content-intro {
     max-width: 360px;
     font-size: 12px;
     line-height: 18px;
@@ -110,7 +110,7 @@
   .student__photo {
     min-width: 292px;
     min-height: 352px;
-    margin: 0 auto;
+    align-self: center;
   }
 }
 
@@ -125,17 +125,17 @@
     padding-bottom: 28px;
   }
 
-  .stident__name {
+  .student__content-name {
     font-size: 30px;
     letter-spacing: -1.2px;
   }
 
-  .student__job {
+  .student__content-job {
     font-size: 11px;
     padding-top: 15px;
   }
 
-  .student__intro {
+  .student__content-intro {
     font-size: 11px;
     font-weight: 400;
     line-height: 16px;
