@@ -3,9 +3,9 @@ import './Form.css';
 import { Link } from "react-router-dom";
 import logo from '../../images/logo.svg';
 
-const Form = ({ title, children, buttonName, spanText, spanPatch, spanLink }) => {
+const Form = ({ title, children, buttonName, spanText, spanPatch, spanLink, formRef }) => {
   return (
-    <form className="form">
+    <form className="form" ref={formRef} noValidate >
       <Link
         className="form__link"
         to={'/'}
