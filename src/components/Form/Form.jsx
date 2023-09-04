@@ -3,9 +3,9 @@ import './Form.css';
 import { Link } from "react-router-dom";
 import logo from '../../images/logo.svg';
 
-const Form = ({ title, children, buttonName, spanText, spanPatch, spanLink, formRef }) => {
+const Form = ({ title, children, buttonName, spanText, spanPatch, spanLink, formRef,  isValid }) => {
   return (
-    <form className="form" ref={formRef} noValidate >
+    <form className="form" ref={formRef}  noValidate >
       <Link
         className="form__link"
         to={'/'}
@@ -20,8 +20,9 @@ const Form = ({ title, children, buttonName, spanText, spanPatch, spanLink, form
       {children}
 
       <button
-        className="form__button"
+        className={`form__button ${!isValid && 'form__button_disabled'}`}
         type="submit"
+        disabled={!isValid}
       >
         {buttonName}
       </button>

@@ -34,7 +34,9 @@ useEffect(() => {
 }, [loggedIn]);
 
 useEffect(() => {
-  if (localStorage.getItem('jwt')) {
+  // if (localStorage.getItem('jwt'))
+  if (loggedIn)
+  {
     const jwt = localStorage.getItem('jwt');
     api.getContent(jwt) 
     .then((res) => {

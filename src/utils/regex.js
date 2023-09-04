@@ -1,1 +1,2 @@
-export const regex = /^(http|https):\/\/(?:www\.)?[a-zA-Z0-9._~\-:?#[\]@!$&'()*+,/;=]{2,256}\.[a-zA-Zа-яА-ЯёЁ0-9./?#-]{2,}$/;
+export const regexName = /^[а-яА-ЯёЁa-zA-Z -]+$/u;
+export const regexEmail = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
