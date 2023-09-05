@@ -36,11 +36,11 @@ const handleSubmit = (evt) => {
         value={values.email} 
         onChange={handleChange} />
         <span className={`form__span ${errors.email && 'form__span_error-register'}`}> Укажите корректный email </span>
-        <span className='form__span'> Что-то пошло не так </span>
+        {/* <span className='form__span'> Что-то пошло не так </span> */}
 
         <label className='form__label' htmlFor='password'> Пароль </label>
         <input 
-                className={`form__input ${errors.password && 'form__input-error'}`} 
+                className={`form__input  ${errors.password && 'form__input-error'}`} 
         id='password' 
         name='password' 
         type='password' 
@@ -50,7 +50,7 @@ const handleSubmit = (evt) => {
         maxLength='10' 
         value={values.password} 
         onChange={handleChange} />
-        <span className={`form__span ${errors.password && 'form__span_error-register'}`}> Что-то пошло не так </span>
+        <span className={`form__span form__span_error-login ${errors.password && 'form__span_error-register'}`}> Что-то пошло не так </span>
       </Form>
     </section>
   );

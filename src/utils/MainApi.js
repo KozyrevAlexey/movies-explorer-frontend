@@ -10,14 +10,14 @@ class MainApi {
     return Promise.reject(`Упс... Что-то пошло не так! Ошибка: ${res.status}`);
   };
 
-  register({ name, email, password }) {
+  register({  email, password, name }) {
     return fetch(`${this._baseUrl}signup`, {
       method: 'POST',
       headers: {
         "Content-Type": "application/json"
       },
       credentials: 'include',
-      body: JSON.stringify({ name, email, password })
+      body: JSON.stringify({ email, password, name })
     })
       .then((res) => this._checkResponse(res))
   };
