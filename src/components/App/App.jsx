@@ -15,11 +15,12 @@ import { api } from '../../utils/MainApi';
 import { apiMovies } from '../../utils/MoviesApi';
 
 function App() {
-  const [currentUser,setCurrentUser] =useState({})
-  const [loggedIn, setLoggedIn] = useState(false)
+  const [currentUser,setCurrentUser] = useState({});
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   // const [email, setEmail] = useState('')
 
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
   const navigate = useNavigate();
 
 useEffect(() => {
@@ -46,24 +47,32 @@ useEffect(() => {
     })
     .catch(err =>console.log(err))
   }
-}, [navigate]);
+// }, [navigate]);
+}, [loggedIn]);
 
 
 
-function handleLogin(password, email) {
-  api.authorize({ password, email})
-  .then(() => {
-    navigate("/signin", {replace: true});
-    // onRegister();
-  })
-  .catch(err => {
-    console.log(err)
-  })
-}
 
-function handleRegister(name, password, email) {
-  api.register({name, password, email })
-    .then(() => {
+// function handleLogin(email, password) {
+//   api.authorize({email, password})
+//   .then((res) => {
+//     if(res.token) {
+//     localStorage.setItem('jwt', res.token);
+//   setLoggedIn(true);
+//   handleLoginIn({ email, password })
+//     navigate("/movies", {replace: true});
+//     // onRegister();
+//     }
+
+//   })
+//   .catch(err => {
+//     console.log(err)
+//   })
+// }
+
+function handleRegister(name, email, password) {
+  api.register({name, email, password })
+    .then((res) => {
       navigate("/movies", { replace: true });
       // onRegister();
     })
@@ -73,9 +82,69 @@ function handleRegister(name, password, email) {
     });
 }
 
+function handleLogin(email, password) {
+  api.authorize({email, password})
+  .then((res) => {
+    if(res.token)
+    localStorage.setItem('jwt', res.token);
+  setLoggedIn(true);
+  handleLoginIn({ email, password })
+    navigate("/movies", { replace: true });
+    // onRegister();
+  })
+  .catch(err => {
+    console.log(`ошибка ${err}`)
+  })
+
+}
+
+const handleLoginIn = (user) => {
+  setLoggedIn(true);
+};
+
+const tokenCheck = () => {
+  const jwt = localStorage.getItem('jwt');
+  if (jwt) {
+    api.getContent(jwt)
+    .then((user) => {
+      handleLoginIn(user);
+      navigate(`${pathname}${search}`, { replace: true})
+    })
+    .catch((err) => console.log(err));
+  }
+}
+useEffect(() => {
+  tokenCheck();
+}, [loggedIn]);
+
 function signOut() {
   localStorage.removeItem("jwt");
   setLoggedIn(false);
+}
+
+function handleUsersUpdate(user) {
+  setIsLoading(true);
+  try {
+    const update = api.setUserInfo(user);
+    setCurrentUser(update.data);
+  } catch (err) {
+    console.log(err);
+  } finally {
+    setIsLoading(false);
+  }
+}
+
+function handleLogaut() {
+  setIsLoading(true);
+  try {
+    api.logout();
+    setLoggedIn(false);
+    localStorage.clear()
+  } catch (err) {
+    console.log(err);
+  } finally {
+    setIsLoading(false);
+  }
 }
 
 
@@ -90,6 +159,7 @@ function signOut() {
             <Route
               path='/'
               element={<Landing />}
+              loggedIn={loggedIn}
             />
             <Route
               path='/movies'
@@ -97,6 +167,7 @@ function signOut() {
                 <ProtectedRoute 
                 element={Movies}
                 textButton='Сахранить'
+                loggedIn={loggedIn}
                 />
               }
             />
@@ -105,6 +176,7 @@ function signOut() {
               element={
                 <ProtectedRoute
                 element={SavedMovies }
+                loggedIn={loggedIn}
                 textButton='x'
                 />
               }
@@ -115,6 +187,9 @@ function signOut() {
                 <ProtectedRoute
                 element={Profile}
                 onSignOut={signOut}
+                loggedIn={loggedIn}
+                handleLogaut={handleLogaut}
+                handleUsersUpdate={handleUsersUpdate}
                 />
                 }
             />

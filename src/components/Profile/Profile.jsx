@@ -1,19 +1,38 @@
 import React from 'react';
 import './Profile.css'
-import { useState } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../Header/Header';
+import { CurrentUserContext } from '../../contexts/CurrentUserContext';
+import { useFormValidation} from '../../hooks/useFormValidation'
 
-const Profile = () => {
 
-  const [name, setName] = useState('Виталий');
-  const [email, setEmail] = useState('pochta@yandex.ru')
+const Profile = ({ handleLogaut, handleUsersUpdate }) => {
+
+  // const [name, setName] = useState('Виталий');
+  // const [email, setEmail] = useState('pochta@yandex.ru')
+  const {resetForm, setIsValid, setValues, values, handleChange } = useFormValidation();
+  const { name, email } = values;
+  const currentUser = useContext(CurrentUserContext);
+
+useEffect(() => {
+  resetForm();
+  setIsValid({ name: true, email: true });
+  setValues({ name: currentUser.name || '', email: currentUser.email || ''});
+}, [currentUser]);
+
+const handleSubmit = (evt) => {
+  evt.preventDefault();
+
+  handleUsersUpdate(values);
+}
+
   return (
     <main className='profile'>
       <Header />
       <section className='profile__content'>
-        <h1 className='profile__title'>Привет, Виталий!</h1>
-        <form className='profile__form'>
+        <h1 className='profile__title'>{`Привет, ${name}`}!</h1>
+        <form className='profile__form' onSubmit={handleSubmit}>
           <div className='profile__element'>
             <label className='profile__label'>
               <p className='profile__name'>Имя</p>
@@ -21,8 +40,8 @@ const Profile = () => {
                 className='profile__input'
                 type='text'
                 placeholder='Введите имя'
-                value={name}
-                onChange={(evt) => setName(evt.target.value)}
+                value={name || ''}
+                onChange={handleChange}
               />
             </label>
             <label className='profile__label'>
@@ -31,8 +50,8 @@ const Profile = () => {
                 className='profile__input'
                 type='text'
                 placeholder='Укажите e-mail'
-                value={email}
-                onChange={(evt) => setEmail(evt.target.value)}
+                value={email || ''}
+                onChange={handleChange}
               />
             </label>
           </div>
@@ -45,7 +64,8 @@ const Profile = () => {
             </button>
             <Link
               className='profile__buttons-exit'
-              to='/signin'>Выйти из аккаунта</Link>
+              to='/signin'
+              onClick={handleLogaut}>Выйти из аккаунта</Link>
           </div>
         </form>
       </section>

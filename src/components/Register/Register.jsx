@@ -9,7 +9,7 @@ const { formRef, values, isValid, errors, handleChange } = useFormValidation();
 const handleSubmit = (evt) => {
   evt.preventDefault();
 
-  onRegister(values);
+  onRegister(values.name, values.email, values.password);
 }
 
   return (

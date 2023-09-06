@@ -14,7 +14,7 @@ const NavigationLanding = () => {
         </Link>
         <Link
           className='nav__link nav__landing-enter'
-          to='/signup'
+          to='/signin'
         >
           Войти
         </Link>

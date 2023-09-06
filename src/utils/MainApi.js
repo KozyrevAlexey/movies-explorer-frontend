@@ -10,14 +10,14 @@ class MainApi {
     return Promise.reject(`Упс... Что-то пошло не так! Ошибка: ${res.status}`);
   };
 
-  register({  email, password, name }) {
+  register({ name, email, password }) {
     return fetch(`${this._baseUrl}signup`, {
       method: 'POST',
       headers: {
         "Content-Type": "application/json"
       },
       credentials: 'include',
-      body: JSON.stringify({ email, password, name })
+      body: JSON.stringify({ name, email, password })
     })
       .then((res) => this._checkResponse(res))
   };
@@ -91,6 +91,16 @@ class MainApi {
     })
       .then((res) => this._checkResponse(res))
   };
+
+  logout() {
+    return fetch(`${this._baseUrl}/signout`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      credentials: 'include',
+    });
+  }
 
 }
 

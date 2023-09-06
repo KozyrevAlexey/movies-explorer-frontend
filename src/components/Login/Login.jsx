@@ -10,7 +10,7 @@ const Login = ({onLogin}) => {
 const handleSubmit = (evt) => {
   evt.preventDefault();
 
-  onLogin(values);
+  onLogin(values.email, values.password);
 }
   return (
     <section className='login'>
