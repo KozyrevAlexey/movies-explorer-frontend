@@ -27,7 +27,7 @@ const handleChange = (evt) => {
   setIsValid(isNameValid && formRef.current.checkValidity());
 };
 
-const resetForm = React.useCallback(
+   const resetForm = React.useCallback(
   (newValues = {}, newErrors = {}, newValid = false) => {
     setValues(newValues);
     setErrors(newErrors);

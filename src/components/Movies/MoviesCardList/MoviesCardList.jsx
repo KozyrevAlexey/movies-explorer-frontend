@@ -14,6 +14,7 @@ const MoviesCardList = ({ textButton }) => {
           <ul className='movies__list'>
             {startCards.slice().map((movie, i) => (
               <MovieCard
+                key={movie.id}
                 movie={movie}
                 textButton={textButton}
               />
@@ -24,8 +25,9 @@ const MoviesCardList = ({ textButton }) => {
         <ul className='movies__list'>
           {saveCards.slice().map((movie, i) => (
             <MovieCard
+              key={movie.id}
               movie={movie}
-              textButton={textButton}
+              textButton={textButton} 
             />
           ))}
         </ul>

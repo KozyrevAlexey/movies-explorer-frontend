@@ -1,19 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import './Navigation.css';
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import NavigationLanding from './NavigationLanding/NavigationLanding';
 import NavigationProfile from './NavigationProfile/NavigationProfile';
 import logo from './../../images/logo.svg';
+import {IsLoggedContext} from './../../contexts/IsLoggedContext'
+
 
 const Navigation = () => {
-  const location = useLocation();
+  const loggedIn = useContext(IsLoggedContext);
 
   return (
     <nav className='nav'>
-      <Link to='/' tabIndex={1}>
+      <Link to='/'>
         <img className='nav__logo' src={logo} alt='Изображение логотипа' />
       </Link>
-      {location.pathname === '/' ? <NavigationLanding /> : <NavigationProfile />}
+      {loggedIn ? <NavigationProfile /> : < NavigationLanding />}
     </nav>
   )
 }

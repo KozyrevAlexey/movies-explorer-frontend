@@ -1,6 +1,6 @@
 import React from 'react';
 import './Profile.css'
-import { useState, useEffect, useContext } from 'react';
+import {  useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../Header/Header';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
@@ -11,7 +11,7 @@ const Profile = ({ handleLogaut, handleUsersUpdate }) => {
 
   // const [name, setName] = useState('Виталий');
   // const [email, setEmail] = useState('pochta@yandex.ru')
-  const {resetForm, setIsValid, setValues, values, handleChange } = useFormValidation();
+  const {formRef, values, setValues, handleChange, setIsValid, resetForm} = useFormValidation();
   const { name, email } = values;
   const currentUser = useContext(CurrentUserContext);
 
@@ -31,14 +31,15 @@ const handleSubmit = (evt) => {
     <main className='profile'>
       <Header />
       <section className='profile__content'>
-        <h1 className='profile__title'>{`Привет, ${name}`}!</h1>
-        <form className='profile__form' onSubmit={handleSubmit}>
+        <h1 className='profile__title'>{`Привет, ${currentUser && currentUser.name}`}!</h1>
+        <form className='profile__form' onSubmit={handleSubmit} ref={formRef}>
           <div className='profile__element'>
             <label className='profile__label'>
               <p className='profile__name'>Имя</p>
               <input
                 className='profile__input'
                 type='text'
+                name='name'
                 placeholder='Введите имя'
                 value={name || ''}
                 onChange={handleChange}
@@ -48,7 +49,8 @@ const handleSubmit = (evt) => {
               <p className='profile__name'>E-mail</p>
               <input
                 className='profile__input'
-                type='text'
+                type='email'
+                name='email'
                 placeholder='Укажите e-mail'
                 value={email || ''}
                 onChange={handleChange}
