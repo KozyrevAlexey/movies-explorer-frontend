@@ -9,9 +9,7 @@ import { useFormValidation} from '../../hooks/useFormValidation'
 
 const Profile = ({ handleLogaut, handleUsersUpdate }) => {
 
-  // const [name, setName] = useState('Виталий');
-  // const [email, setEmail] = useState('pochta@yandex.ru')
-  const {formRef, values, setValues, handleChange, setIsValid, resetForm} = useFormValidation();
+  const { values, setValues, handleChange, setIsValid, resetForm} = useFormValidation();
   const { name, email } = values;
   const currentUser = useContext(CurrentUserContext);
 
@@ -32,7 +30,7 @@ const handleSubmit = (evt) => {
       <Header />
       <section className='profile__content'>
         <h1 className='profile__title'>{`Привет, ${currentUser && currentUser.name}`}!</h1>
-        <form className='profile__form' onSubmit={handleSubmit} ref={formRef}>
+        <form className='profile__form' onSubmit={handleSubmit} >
           <div className='profile__element'>
             <label className='profile__label'>
               <p className='profile__name'>Имя</p>

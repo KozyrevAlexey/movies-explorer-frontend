@@ -5,7 +5,7 @@ import {useFormValidation} from '../../hooks/useFormValidation';
 
 
 const Login = ({onLogin}) => {
-  const { formRef, values, isValid, errors, handleChange } = useFormValidation();
+  const {  values, isValid, errors, handleChange } = useFormValidation();
 
 const handleSubmit = (evt) => {
   evt.preventDefault();
@@ -20,7 +20,6 @@ const handleSubmit = (evt) => {
         spanText='Еще не зарегистрированы?'
         spanPatch='/signup'
         spanLink='Регистрация'
-        formRef={formRef}
         isValid={isValid}
         onSubmit={handleSubmit}
       >
@@ -35,7 +34,7 @@ const handleSubmit = (evt) => {
         required 
         value={values.email} 
         onChange={handleChange} />
-        <span className={`form__span ${errors.email && 'form__span_error-register'}`}> Укажите корректный email </span>
+        <span className={`form__span ${errors.email && 'form__span_error-register'}`}> {errors.email} </span>
         {/* <span className='form__span'> Что-то пошло не так </span> */}
 
         <label className='form__label' htmlFor='password'> Пароль </label>
@@ -46,11 +45,11 @@ const handleSubmit = (evt) => {
         type='password' 
         placeholder='Укажите пароль' 
         required 
-        minLength='2' 
+        minLength='5' 
         maxLength='10' 
         value={values.password} 
         onChange={handleChange} />
-        <span className={`form__span form__span_error-login ${errors.password && 'form__span_error-register'}`}> Что-то пошло не так </span>
+        <span className={`form__span form__span_error-login ${errors.password && 'form__span_error-register'}`}> {errors.password} </span>
       </Form>
     </section>
   );
