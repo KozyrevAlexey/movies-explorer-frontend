@@ -94,7 +94,7 @@ class MainApi {
 
   logout() {
     return fetch(`${this._baseUrl}/signout`, {
-      method: 'GET',
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
